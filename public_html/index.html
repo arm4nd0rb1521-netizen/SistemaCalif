@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Calificaciones</title>
+
+    <!-- hacemos referencia a nuestra hoja de estilos -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- usamos un div que contendrá el rectangulo principal -->
+    <div class="contenedor">
+
+        <h1>Sistema de Calificaciones</h1>
+
+        <p>Captura las calificaciones del alumno</p>
+
+        <!-- este div contiene nuestro formulario -->
+        <div class="formulario">
+
+            <!-- etiqueta para poner una etiqueta de texto -->
+            <label for="nombre">Nombre del alumno:</label>
+            <!-- solicitamos el nombre -->
+            <input type="text" id="nombre" placeholder="Escribe el nombre">
+
+            <!-- solicitamos la edad -->
+            <label for="edad">Edad: </label>
+            <input type="number" id="edad" min="0" max="100">
+
+            <!-- solicitamos las calificaciones con el tipo de entrada "number" que evita caracteres que no sean numeros -->
+            <label for="calificacion1">Calificación 1:</label>
+            <input type="number" id="calificacion1" min="0" max="10">
+
+            <label for="calificacion2">Calificación 2:</label>
+            <input type="number" id="calificacion2" min="0" max="10">
+
+            <label for="calificacion3">Calificación 3:</label>
+            <input type="number" id="calificacion3" min="0" max="10">
+            
+            <label for="calificacion4">Calificación 4:</label>
+            <input type="number" id="calificacion4" min="0" max="10">
+
+            <!-- creamos los botones de acciones (limpiar pantalla, agregar alumno a la lista y mostrar todos los alumnos registrados -->
+            <!-- cada boton hace referencia a un metodo en el JS -->
+            <button onclick="limpiar()">
+                Limpiar
+            </button>
+            
+            <button onclick="agregar()">
+                Agregar alumno
+            </button>
+            
+            <button onclick="mostrarAlumnos()">
+                Mostrar alumnos registrados
+            </button>
+
+        </div>
+
+        <!-- este div conendrá los mensajes que nos envié el JS -->
+        <div id="resultado" class="resultado">
+
+        </div>
+
+    </div>
+
+    <!-- hacemos referencia a nuestro archivo de JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
